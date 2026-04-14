@@ -1,11 +1,14 @@
 package com.example.unscramble.ui
 
-import androidx.room.ColumnInfo
 import androidx.room.Entity
-import com.google.gson.annotations.SerializedName
+import androidx.room.PrimaryKey
 
-@Entity("words")
+@Entity(tableName = "words")
 data class Word(
-    @field:SerializedName("currentWord")
-    val currentWord: String? = null,
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+
+    val currentWord: String,
+
+    val isCorrect: Boolean = true
 )

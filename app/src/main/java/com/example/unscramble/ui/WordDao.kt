@@ -6,9 +6,11 @@ import androidx.room.Query
 
 @Dao
 interface WordDao {
-    @Query("Select * from words")
-    suspend fun getAllWords(): List<Word>
+
+    @Query("SELECT * FROM words WHERE isCorrect = 1")
+    suspend fun getCorrectWords(): List<Word>
 
     @Insert
     suspend fun insert(vararg word: Word)
+
 }
