@@ -68,7 +68,7 @@ dependencies {
     val room_version = "2.7.0"
 
     implementation("androidx.room:room-runtime:$room_version")
-
+    ksp("androidx.room:room-compiler:$room_version")
     implementation("com.squareup.retrofit2:retrofit:3.0.0")
     implementation("com.squareup.retrofit2:converter-gson:3.0.0")
     implementation("io.coil-kt.coil3:coil-compose:3.0.0")
